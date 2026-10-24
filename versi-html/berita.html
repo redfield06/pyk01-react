@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Berita – ArenaFutsal Academy</title>
+    <link rel="stylesheet" href="reveal.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="site-nav"></div>
+
+    <main class="page">
+        <div class="w">
+            <h2 data-anim="down">Berita</h2>
+            <p class="sub" data-anim="down" data-delay="100">Kabar terbaru seputar akademi kami.</p>
+
+            <div class="filters" id="filters"></div>
+            <div id="featured"></div>
+            <div class="news-grid" id="newsGrid"></div>
+        </div>
+    </main>
+
+    <!-- Jendela baca berita -->
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="reveal.js"></script>
+    <script src="layout.js"></script>
+    <script src="berita.js"></script>
+</body>
+
+</html>

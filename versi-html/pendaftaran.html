@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pendaftaran – ArenaFutsal Academy</title>
+<link rel="stylesheet" href="reveal.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar (diatur di layout.js) -->
+<div id="site-nav"></div>
+
+<main class="page">
+
+<div class="w"><div class="form">
+  <h2 data-anim="down">Pendaftaran Pemain</h2>
+  <p class="sub" data-anim="down" data-delay="100">Lengkapi 3 langkah berikut untuk bergabung.</p>
+  <div class="steps" data-anim="up"><div class="on">1 Data Pemain</div><div>2 Kontak</div><div>3 Program</div></div>
+
+  <form id="regForm">
+    <div class="sec" data-anim="left">
+      <h3><i>1</i>Data Pemain</h3>
+      <label>Nama<input name="nama" required placeholder="Nama lengkap pemain"></label>
+      <div class="row">
+        <label>Jenis Kelamin<select name="jk"><option>Laki-laki</option><option>Perempuan</option></select></label>
+        <label>Tanggal Lahir<input type="date" id="tl" name="tgl_lahir" required></label>
+        <label>Umur<input id="um" name="umur" placeholder="Terisi otomatis" readonly></label>
+        <label>Tempat Lahir<input name="tempat_lahir" required placeholder="Kota kelahiran"></label>
+      </div>
+      <label>Asal Sekolah<input name="sekolah" required placeholder="Nama sekolah"></label>
+    </div>
+
+    <div class="sec" data-anim="right">
+      <h3><i>2</i>Kontak dan Alamat</h3>
+      <div class="row">
+        <label>Alamat Email<input type="email" name="email" required placeholder="nama@email.com"></label>
+        <label>No WhatsApp<input type="tel" name="wa" required placeholder="08xxxxxxxxxx"></label>
+      </div>
+      <label>Nama Orang Tua/Wali<input name="ortu" required placeholder="Nama orang tua/wali"></label>
+      <label>Alamat Lengkap<textarea name="alamat" rows="3" required placeholder="Jalan, kelurahan, kecamatan, kota"></textarea></label>
+    </div>
+
+    <div class="sec" data-anim="left">
+      <h3><i>3</i>Program &amp; Perlengkapan</h3>
+      <div class="row">
+        <label>Program<select name="program"><option>Junior (KU 6–9)</option><option>Intermediate (KU 10–13)</option><option>Elite (KU 14–17)</option></select></label>
+        <label>Ukuran Jersey<select name="jersey"><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label>
+      </div>
+      <label>Catatan (Opsional)<textarea name="catatan" rows="2" placeholder="Alergi, cedera, atau info lain"></textarea></label>
+    </div>
+
+    <button class="btn big" type="submit" data-anim="zoom">Kirim Pendaftaran</button>
+  </form>
+</div></div>
+</main>
+
+<!-- Footer (diatur di layout.js) -->
+<div id="site-footer"></div>
+
+<script src="reveal.js"></script>
+<script src="layout.js"></script>
+<script src="pendaftaran.js"></script>
+</body>
+</html>

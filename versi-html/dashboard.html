@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard – ArenaFutsal Academy</title>
+<link rel="stylesheet" href="reveal.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="logo">⚽ ARENA<b>FUTSAL</b></div>
+  <nav class="side-menu">
+    <button class="item active" data-target="biodata"><span>👤</span> Biodata</button>
+    <button class="item" data-target="jadwal"><span>📅</span> Jadwal</button>
+    <button class="item" data-target="pengumuman"><span>📢</span> Pengumuman <em class="badge">3</em></button>
+    <button class="item" data-target="bayar"><span>💳</span> Bayar Latihan</button>
+  </nav>
+  <button class="item logout" id="logout"><span>🚪</span> Keluar</button>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<!-- KONTEN -->
+<main class="main">
+  <header class="topbar">
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div>
+      <h1 id="pageTitle">Biodata</h1>
+      <p class="mut" id="pageSub">Data pemain yang terdaftar</p>
+    </div>
+    <div class="user">
+      <div class="avatar">R</div>
+      <div><b>Rizky Pratama</b><small class="mut">Pemain · Intermediate</small></div>
+    </div>
+  </header>
+
+  <!-- 1. BIODATA -->
+  <section class="view active" id="biodata">
+    <div class="profile card" data-anim="left">
+      <div class="avatar big">R</div>
+      <h2>Rizky Pratama</h2>
+      <p class="mut">ID: AF-2026-014</p>
+      <span class="pill ok">● Aktif</span>
+      <div class="mini">
+        <div><b>12</b><small>Pertemuan</small></div>
+        <div><b>92%</b><small>Kehadiran</small></div>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="card" data-anim="right">
+        <h3>Data Pemain</h3>
+        <dl class="dl">
+          <div><dt>Jenis Kelamin</dt><dd>Laki-laki</dd></div>
+          <div><dt>Tanggal Lahir</dt><dd>12 Mei 2013</dd></div>
+          <div><dt>Umur</dt><dd>13 tahun</dd></div>
+          <div><dt>Tempat Lahir</dt><dd>Jakarta</dd></div>
+          <div><dt>Asal Sekolah</dt><dd>SDN 01 Menteng</dd></div>
+          <div><dt>Ukuran Jersey</dt><dd>M</dd></div>
+        </dl>
+      </div>
+      <div class="card" data-anim="right" data-delay="120">
+        <h3>Kontak &amp; Alamat</h3>
+        <dl class="dl">
+          <div><dt>Email</dt><dd>rizky@email.com</dd></div>
+          <div><dt>No WhatsApp</dt><dd>0812-3456-7890</dd></div>
+          <div><dt>Orang Tua/Wali</dt><dd>Bpk. Andi Pratama</dd></div>
+          <div class="full"><dt>Alamat</dt><dd>Jl. Merdeka No. 10, Menteng, Jakarta Pusat</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. JADWAL -->
+  <section class="view" id="jadwal">
+    <div class="cards3">
+      <article class="card sch" data-anim="left"><div class="day">SEN</div><div><h3>Teknik Dasar</h3><p class="mut">16.00 – 17.30 · Lapangan A</p></div></article>
+      <article class="card sch" data-anim="up" data-delay="100"><div class="day">RAB</div><div><h3>Taktik &amp; Posisi</h3><p class="mut">16.00 – 17.30 · Lapangan B</p></div></article>
+      <article class="card sch" data-anim="right" data-delay="200"><div class="day">SAB</div><div><h3>Game Internal</h3><p class="mut">08.00 – 10.00 · Lapangan A</p></div></article>
+    </div>
+    <div class="card" data-anim="zoom" style="margin-top:18px">
+      <h3>Pertandingan Mendatang</h3>
+      <p class="mut">Sabtu, 24 Okt 2026 · Arena Futsal vs Garuda FC · 09.00</p>
+    </div>
+  </section>
+
+  <!-- 3. PENGUMUMAN -->
+  <section class="view" id="pengumuman">
+    <article class="card ann" data-anim="left"><span class="pill warn">Penting</span><h3>Latihan dipindah ke Lapangan B</h3><p class="mut">Mulai pekan depan, sesi Rabu berpindah ke Lapangan B karena renovasi.</p><small class="mut">15 Okt 2026</small></article>
+    <article class="card ann" data-anim="right" data-delay="100"><span class="pill info">Info</span><h3>Pembagian jersey baru</h3><p class="mut">Jersey akan dibagikan Sabtu ini sebelum latihan dimulai.</p><small class="mut">12 Okt 2026</small></article>
+    <article class="card ann" data-anim="left" data-delay="200"><span class="pill ok">Event</span><h3>Turnamen antar akademi</h3><p class="mut">Pendaftaran tim dibuka sampai akhir bulan. Hubungi pelatih.</p><small class="mut">10 Okt 2026</small></article>
+  </section>
+
+  <!-- 4. BAYAR LATIHAN -->
+  <section class="view" id="bayar">
+    <div class="pay">
+      <div class="card bill" data-anim="left">
+        <span class="pill warn">Belum Dibayar</span>
+        <h3>Iuran Latihan Oktober 2026</h3>
+        <div class="amount">Rp 350.000</div>
+        <p class="mut">Jatuh tempo: 25 Oktober 2026</p>
+        <label>Metode Pembayaran
+          <select id="method">
+            <option>Transfer Bank BCA</option>
+            <option>Transfer Bank Mandiri</option>
+            <option>QRIS</option>
+          </select>
+        </label>
+        <p class="rek" id="rek">BCA 1234567890 a.n. ArenaFutsal Academy</p>
+        <label>Upload Bukti Transfer
+          <input type="file" id="proof" accept="image/*,.pdf">
+        </label>
+        <button class="btn" id="payBtn">Kirim Bukti Pembayaran</button>
+      </div>
+
+      <div class="card" data-anim="right">
+        <h3>Riwayat Pembayaran</h3>
+        <ul class="hist">
+          <li><div><b>September 2026</b><small class="mut">Dibayar 3 Sep</small></div><span class="pill ok">Lunas</span></li>
+          <li><div><b>Agustus 2026</b><small class="mut">Dibayar 4 Agu</small></div><span class="pill ok">Lunas</span></li>
+          <li><div><b>Juli 2026</b><small class="mut">Dibayar 2 Jul</small></div><span class="pill ok">Lunas</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="reveal.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
